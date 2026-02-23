@@ -1,51 +1,108 @@
-📘 Student Management API
-🚀 Project Title
+# 📘 Student Management REST API
 
-Student Management REST API
+## 🚀 Project Overview
 
-🎯 Objective
+Student Management REST API is a simple backend application built using **Express.js** that manages student data stored in a static in-memory array.
 
-This project is a simple REST API built using Express.js that manages student data stored in a static in-memory array.
+This project demonstrates core backend concepts such as:
+- REST API design
+- Route parameters
+- Status codes
+- Filtering & aggregation
+- Basic server setup
 
-The API provides endpoints to:
+---
 
-Retrieve all students
+## 🎯 Objective
 
-Find topper(s)
+The objective of this project is to:
 
-Calculate average CGPA
+- Build a RESTful API using Node.js and Express
+- Perform filtering and aggregation on static data
+- Handle dynamic routes and parameters
+- Return proper HTTP status codes
+- Structure a backend project correctly
 
-Count total students
+---
 
-Fetch student by ID
+## 🛠 Tech Stack
 
-Fetch students by branch
+- Node.js
+- Express.js
+- CORS
+- JavaScript (ES6)
 
-This project demonstrates understanding of:
+---
 
-REST API structure
+## 📂 Implemented Routes
 
-Route parameters
+### 1️⃣ Health Check
+| Method | Route | Description |
+|--------|--------|------------|
+| GET | `/` | Checks if server is running |
 
-Status codes
+---
 
-Array operations (filter, find, loops)
+### 2️⃣ Get All Students
+| Method | Route |
+|--------|--------|
+| GET | `/students` |
 
-Basic backend logic
+Returns all student records.
 
-📌 List of Implemented Routes
-Method	Route	Description
-GET	/	Check if server is running
-GET	/students	Get all students
-GET	/students/topper	Get student(s) with highest CGPA
-GET	/students/average	Get average CGPA
-GET	/students/count	Get total number of students
-GET	/students/:id	Get student by ID
-GET	/students/branch/:branchName	Get students by branch
-🌐 Sample API URLs
+---
 
-If running locally:
+### 3️⃣ Get Topper(s)
+| Method | Route |
+|--------|--------|
+| GET | `/students/topper` |
 
+Returns student(s) with the highest CGPA.  
+Returns `404` if no students exist.
+
+---
+
+### 4️⃣ Get Average CGPA
+| Method | Route |
+|--------|--------|
+| GET | `/students/average` |
+
+Returns average CGPA of all students.
+
+---
+
+### 5️⃣ Get Total Students Count
+| Method | Route |
+|--------|--------|
+| GET | `/students/count` |
+
+Returns total number of students.
+
+---
+
+### 6️⃣ Get Student By ID
+| Method | Route |
+|--------|--------|
+| GET | `/students/:id` |
+
+Returns a student matching the given ID.  
+Returns `404` if student not found.
+
+---
+
+### 7️⃣ Get Students By Branch
+| Method | Route |
+|--------|--------|
+| GET | `/students/branch/:branchName` |
+
+Returns student(s) belonging to the specified branch.  
+Returns `404` if no students found.
+
+---
+
+## 🌐 Sample API URLs (Local Testing)
+
+```bash
 http://localhost:3000/
 http://localhost:3000/students
 http://localhost:3000/students/topper
@@ -53,52 +110,75 @@ http://localhost:3000/students/average
 http://localhost:3000/students/count
 http://localhost:3000/students/1
 http://localhost:3000/students/branch/CSE
+```
 
-🛠 Steps to Run Locally
+---
 
-1️⃣ Clone the repository
+## ▶️ Steps to Run Locally
 
-git clone <your-repo-link>
+### 1️⃣ Clone the repository
 
+```bash
+git clone <your-repository-link>
+```
 
-2️⃣ Navigate into project folder
+### 2️⃣ Navigate into project folder
 
+```bash
 cd student-api
+```
 
+### 3️⃣ Install dependencies
 
-3️⃣ Install dependencies
+```bash
+npm install
+```
 
+### 4️⃣ Install required packages (if not installed)
+
+```bash
 npm install express cors
+```
 
+### 5️⃣ Start the server
 
-4️⃣ Run the server
-
+```bash
 node index.js
+```
 
+Server will run at:
 
-5️⃣ Open browser or Postman
-
+```
 http://localhost:3000
+```
 
-🌍 Deployed Link
+---
 
-Add your deployed backend URL here:
+## 🌍 Deployment
 
+You can deploy this API using:
+
+- Render
+- Railway
+- Vercel
+- Cyclic
+
+### 🔗 Deployed Link
+
+```
 https://your-deployed-link.com
+```
+
+(Add your actual deployed link here)
+
+---
 
 
-(You can deploy using Render, Railway, or Vercel)
 
-📚 Tech Stack
+## 👨‍💻 Author
 
-Node.js
+**Amrit Raj**
 
-Express.js
+---
 
-CORS
-
-JavaScript (ES6)
-
-👨‍💻 Author
-
-Amrit Raj
+---
